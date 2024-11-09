@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Security Department</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="egertonuniversity-logo.png" alt="University Security Logo" class="logo">
+            </div>
+                <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="report.html">Report Incident</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Security Department</h1>
+            <p class="hero-subtitle">Your Safety, Our Priority</p>
+            <a href="report.html" class="cta-button">Report an Incident</a>
+        </div>
+            
+        
+    </header>
+
+    <!-- Additional Sections -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Our mission is to protect the university community through vigilance, patrols, and swift response to incidents.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>We provide a range of security services, including crime prevention, guidance, and emergency response.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 University Security Department</p>
+    </footer>
+
+    <script>
+         function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('open');
+            document.querySelector('.hamburger').classList.toggle('toggle');
+        }
+   
+        function showNotification() {
+            const notification = document.getElementById('notification');
+            notification.style.display = 'block';
+            notification.classList.add('slide-in');
+        }
+
+        function dismissNotification() {
+            const notification = document.getElementById('notification');
+            notification.classList.remove('slide-in');
+            notification.style.display = 'none';
+        }
+
+        // Show the notification when the page loads after 2 seconds
+        window.onload = function() {
+            setTimeout(showNotification, 2000);
+        };
+    </script>
+</body>
+</html>
